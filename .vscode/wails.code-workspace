@@ -1,0 +1,86 @@
+{
+  "folders": [
+    {
+      "name": "Root",
+      "path": ".."
+    },
+    {
+      "name": "Frontend",
+      "path": "../frontend"
+    }
+  ],
+  "settings": {
+    // Inherit from main settings.json
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/build/bin": true,
+      "**/.next": true,
+      "**/.git": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true
+    },
+    
+    // Multi-root workspace specific settings
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/build/bin": true,
+      "**/.next": true,
+      "**/dist": true,
+      "**/.git": true,
+      "**/coverage": true,
+      "**/.nyc_output": true
+    },
+    
+    // Terminal settings
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.profiles.windows": {
+      "PowerShell": {
+        "source": "PowerShell",
+        "icon": "terminal-powershell"
+      },
+      "Command Prompt": {
+        "path": [
+          "${env:windir}\\Sysnative\\cmd.exe",
+          "${env:windir}\\System32\\cmd.exe"
+        ],
+        "args": [],
+        "icon": "terminal-cmd"
+      },
+      "Git Bash": {
+        "source": "Git Bash"
+      }
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "golang.go",
+      "ms-vscode.vscode-typescript-next",
+      "bradlc.vscode-tailwindcss",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "eamodio.gitlens"
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Start Wails Dev",
+        "type": "shell",
+        "command": "wails dev",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        },
+        "problemMatcher": ["$go"]
+      }
+    ]
+  }
+}
