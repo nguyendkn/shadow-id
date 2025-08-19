@@ -15,6 +15,7 @@ build/linux/
 *.tar.gz
 *.zip
 *.md5
+*.syso
 
 # Wails temporary files
 .wails/

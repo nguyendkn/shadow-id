@@ -18,9 +18,7 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": [
-        "$go"
-      ],
+      "problemMatcher": ["$go"],
       "runOptions": {
         "runOn": "folderOpen"
       }
@@ -39,9 +37,7 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": [
-        "$go"
-      ]
+      "problemMatcher": ["$go"]
     },
     {
       "label": "wails:build:production",
@@ -57,9 +53,7 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": [
-        "$go"
-      ]
+      "problemMatcher": ["$go"]
     },
     {
       "label": "frontend:dev",
@@ -78,9 +72,7 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": [
-        "$tsc"
-      ]
+      "problemMatcher": ["$tsc"]
     },
     {
       "label": "frontend:build",
@@ -99,9 +91,7 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": [
-        "$tsc"
-      ]
+      "problemMatcher": ["$tsc"]
     },
     {
       "label": "frontend:lint",
@@ -120,9 +110,7 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": [
-        "$eslint-stylish"
-      ]
+      "problemMatcher": ["$eslint-stylish"]
     },
     {
       "label": "go:test",
@@ -138,9 +126,7 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": [
-        "$go"
-      ]
+      "problemMatcher": ["$go"]
     },
     {
       "label": "go:mod:tidy",
@@ -156,6 +142,59 @@
         "showReuseMessage": true,
         "clear": false
       }
+    },
+    {
+      "label": "tailwind:watch",
+      "type": "shell",
+      "command": "npx",
+      "args": [
+        "tailwindcss",
+        "-i",
+        "./app/globals.css",
+        "-o",
+        "./dist/output.css",
+        "--watch"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/frontend"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "tailwind:build",
+      "type": "shell",
+      "command": "npx",
+      "args": [
+        "tailwindcss",
+        "-i",
+        "./app/globals.css",
+        "-o",
+        "./dist/output.css",
+        "--minify"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/frontend"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": []
     }
   ]
 }

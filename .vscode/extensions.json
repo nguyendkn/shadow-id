@@ -2,33 +2,36 @@
   "recommendations": [
     // Go extensions
     "golang.go",
-    
+
     // TypeScript/JavaScript extensions
     "ms-vscode.vscode-typescript-next",
     "bradlc.vscode-tailwindcss",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
-    
+
     // React/Next.js extensions
     "ms-vscode.vscode-json",
     "formulahendry.auto-rename-tag",
     "christian-kohler.path-intellisense",
     "ms-vscode.vscode-typescript-next",
-    
+
+    // CSS/Tailwind extensions
+    "stylelint.vscode-stylelint",
+    "heybourn.headwind",
+    "austenc.tailwind-docs",
+    "bourhaouta.tailwindshades",
+
     // General development
     "ms-vscode.vscode-json",
     "redhat.vscode-yaml",
     "ms-vscode.hexeditor",
     "gruntfuggly.todo-tree",
-    
+
     // Git extensions
     "eamodio.gitlens",
-    
+
     // Wails specific (if available)
     "ms-vscode.vscode-json"
   ],
-  "unwantedRecommendations": [
-    "ms-vscode.vscode-typescript",
-    "hookyqr.beautify"
-  ]
+  "unwantedRecommendations": ["ms-vscode.vscode-typescript", "hookyqr.beautify"]
 }

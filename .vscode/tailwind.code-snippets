@@ -1,0 +1,121 @@
+{
+  "Tailwind Base": {
+    "prefix": "tw-base",
+    "body": [
+      "@tailwind base;",
+      "@tailwind components;",
+      "@tailwind utilities;"
+    ],
+    "description": "Add Tailwind CSS base directives"
+  },
+  "Tailwind Apply": {
+    "prefix": "tw-apply",
+    "body": [
+      "@apply $1;"
+    ],
+    "description": "Apply Tailwind utilities"
+  },
+  "Tailwind Layer": {
+    "prefix": "tw-layer",
+    "body": [
+      "@layer $1 {",
+      "  $2",
+      "}"
+    ],
+    "description": "Create Tailwind layer"
+  },
+  "Tailwind Screen": {
+    "prefix": "tw-screen",
+    "body": [
+      "@screen $1 {",
+      "  $2",
+      "}"
+    ],
+    "description": "Create responsive breakpoint"
+  },
+  "Tailwind Component": {
+    "prefix": "tw-component",
+    "body": [
+      "@layer components {",
+      "  .$1 {",
+      "    @apply $2;",
+      "  }",
+      "}"
+    ],
+    "description": "Create Tailwind component"
+  },
+  "Tailwind Utility": {
+    "prefix": "tw-utility",
+    "body": [
+      "@layer utilities {",
+      "  .$1 {",
+      "    $2",
+      "  }",
+      "}"
+    ],
+    "description": "Create Tailwind utility"
+  },
+  "Flexbox Center": {
+    "prefix": "flex-center",
+    "body": [
+      "flex items-center justify-center"
+    ],
+    "description": "Flexbox center alignment"
+  },
+  "Grid Center": {
+    "prefix": "grid-center",
+    "body": [
+      "grid place-items-center"
+    ],
+    "description": "Grid center alignment"
+  },
+  "Responsive Container": {
+    "prefix": "container-responsive",
+    "body": [
+      "container mx-auto px-4 sm:px-6 lg:px-8"
+    ],
+    "description": "Responsive container with padding"
+  },
+  "Button Base": {
+    "prefix": "btn-base",
+    "body": [
+      "inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2"
+    ],
+    "description": "Base button classes"
+  },
+  "Card Base": {
+    "prefix": "card-base",
+    "body": [
+      "bg-white overflow-hidden shadow rounded-lg"
+    ],
+    "description": "Base card classes"
+  },
+  "Input Base": {
+    "prefix": "input-base",
+    "body": [
+      "block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+    ],
+    "description": "Base input classes"
+  },
+  "Transition Base": {
+    "prefix": "transition-base",
+    "body": [
+      "transition duration-150 ease-in-out"
+    ],
+    "description": "Base transition classes"
+  },
+  "Text Gradient": {
+    "prefix": "text-gradient",
+    "body": [
+      "bg-gradient-to-r from-$1 to-$2 bg-clip-text text-transparent"
+    ],
+    "description": "Text gradient effect"
+  },
+  "Backdrop Blur": {
+    "prefix": "backdrop-blur",
+    "body": [
+      "backdrop-blur-sm bg-white/30"
+    ],
+    "description": "Backdrop blur effect"
+  }
+}
