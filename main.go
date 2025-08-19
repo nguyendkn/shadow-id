@@ -2,8 +2,11 @@ package main
 
 import (
 	"embed"
+	"log"
 
-	"github.com/wailsapp/wails/v2"
+	"shadow-id/internal/infra/wails"
+
+	wailsruntime "github.com/wailsapp/wails/v2"
 	"github.com/wailsapp/wails/v2/pkg/options"
 	"github.com/wailsapp/wails/v2/pkg/options/assetserver"
 )
@@ -12,25 +15,28 @@ import (
 var assets embed.FS
 
 func main() {
-	// Create an instance of the app structure
-	app := NewApp()
+	// Initialize application
+	app, err := wails.NewApp()
+	if err != nil {
+		log.Fatalf("Failed to initialize application: %v", err)
+	}
 
 	// Create application with options
-	err := wails.Run(&options.App{
-		Title:  "shadow-id",
+	err = wailsruntime.Run(&options.App{
+		Title:  "Shadow ID",
 		Width:  1024,
 		Height: 768,
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},
 		BackgroundColour: &options.RGBA{R: 27, G: 38, B: 54, A: 1},
-		OnStartup:        app.startup,
-		Bind: []interface{}{
+		OnStartup:        app.Startup,
+		Bind: []any{
 			app,
 		},
 	})
 
 	if err != nil {
-		println("Error:", err.Error())
+		log.Fatalf("Error running application: %v", err)
 	}
 }
